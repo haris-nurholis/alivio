@@ -1,0 +1,197 @@
+.header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 0;
+  width: 100%;
+  z-index: 8;
+  transition: all .3s ease;
+  background-color: color(white);
+  .on-scroll & {
+    box-shadow: 0 5px 10px rgba(color(black), .1);
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__logo {
+    float: left;
+    padding: 12px 0;
+    margin-right: 172px;
+    @include large {
+      margin-right: 56px;
+    }
+  }
+  &__img {
+    display: block;
+  }
+  .burger-menu {
+    display: none;
+    @include medium {
+      display: block;
+      position: absolute;
+      margin-top: -21px;
+      top: 50%;
+      right: 12px;
+    }
+    &__bar {
+      transition: all .4s ease;
+      .show-navigation & {
+        &:nth-child(1) {
+          transform: rotate(136deg) translate(5px, -5px);
+          transition-delay: .3s;
+        }
+        &:nth-child(2) {
+          transform: scaleX(0);
+        }
+        &:nth-child(3) {
+          transform: rotate(-135deg) translate(4px, 5px);
+          transition-delay: .3s;
+        }
+      }
+    }
+  }
+  &__nav-mobile {
+    @include clearfix;
+    .show-navigation & {
+      transform: none;
+      transition-delay: 0s;
+    }
+    @include medium {
+      transition: all .9s ease;
+      transition-delay: .5s;
+      position: fixed;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      top: 88px;
+      z-index: 2;
+      padding: 0 24px;
+      visibility: hidden;
+    }
+    @include small {
+      top: 16px;
+    }
+  }
+  &__nav {
+    float: left;
+    padding: 10px 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 0;
+    @include medium {
+      float: none;
+      padding: 0;
+    }
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 72px;
+      @include font-size(20);
+      font-weight: fw(medium);
+      &:last-child {
+        margin-right: 0;
+      }
+      @include large {
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include medium {
+        display: block;
+        margin-bottom: 16px;
+        margin-right: 0;
+        transform: translateY(16px);
+        transition: all .4s ease .2s;
+        opacity: 0;
+        visibility: hidden;
+        @for $no from 1 through 4 {
+          &:nth-child(#{$no}) {
+            $timer: 200 - ($no * 70);
+            transition-delay: #{$timer}ms;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .show-navigation & {
+          transform: none;
+          opacity: 1;
+          visibility: visible;
+          @for $no from 1 through 4 {
+            &:nth-child(#{$no}) {
+              $timer: 300 + ($no * 70);
+              transition-delay: #{$timer}ms;
+            }
+          }
+        }
+      }
+    }
+    &__link {
+      text-decoration-style: none;
+      color: color(grey, 1);
+      position: relative;
+      padding-bottom: 32px;
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        border-bottom: 3px solid color(primary);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: all .3s ease;
+        @include small {
+          content: none;
+          display: none;
+        }
+      }
+      &:hover {
+        color: color(primary);
+        &:after {
+          transform: scaleX(1);
+          transform-origin: center right;
+          transition-delay: .2s;
+          @include small {
+            transform: scaleX(0);
+          }
+        }
+      }
+      @include medium {
+        display: block;
+        padding: 16px 0;
+        color: color(white);
+        margin: 0;
+      }
+    }
+  }
+  &__auth {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    @include medium {
+      float: none;
+    }
+  }
+  &__bg  {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    right: 12px;
+    top: 21px;
+    border-radius: 50%;
+    background-color: color(secondary);
+    transition: all .6s ease;
+    transition-delay: .3s;
+    transform: scale(0);
+    z-index: 1;
+    .show-navigation & {
+      transform: scale(60);
+      transition: all .9s ease 0s;
+    }
+  }
+}

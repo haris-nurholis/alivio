@@ -6,7 +6,14 @@ import {
 
 // --- components
 import {
-  Example
+  // Example
+  Header,
+  Footer,
+  Banner,
+  Story,
+  WindowAnimate,
+  WindowScroll,
+  WindowResize
 } from 'components';
 
 // --- App
@@ -35,7 +42,15 @@ const App = (() => {
       BrowserCheck.init();
 
       // --- Project
-      Example.init();
+      // Example.init();
+      Header.init();
+      Footer.init();
+      Banner.init();
+      Story.init();
+      WindowAnimate.init();
+      WindowScroll.init();
+      WindowResize.init();
+
     })(jQuery);
   }
 

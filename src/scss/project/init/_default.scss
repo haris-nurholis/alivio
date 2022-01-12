@@ -5,9 +5,9 @@
 body {
   font-family: ff(main);
   font-weight: fw(regular);
-  background-color: color(grey, 1);
+  // background-color: color(grey, 1);
   color: color(black);
-  @include font-size(body);
+  @include font-size(16);
   &.rm-scroll {
     overflow: hidden;
     touch-action: none;
@@ -22,32 +22,32 @@ body {
 }
 
 h1 {
-  @include font-size(h1);
+  @include font-size(150);
   font-weight: fw(bold);
 }
 
 h2 {
-  @include font-size(h2);
+  @include font-size(110);
   font-weight: fw(bold);
 }
 
 h3 {
-  @include font-size(h3);
+  @include font-size(64);
   font-weight: fw(bold);
 }
 
 h4 {
-  @include font-size(h4);
+  @include font-size(48);
   font-weight: fw(bold);
 }
 
 h5 {
-  @include font-size(h5);
+  @include font-size(32);
   font-weight: fw(bold);
 }
 
 h6 {
-  @include font-size(h6);
+  @include font-size(24);
   font-weight: fw(bold);
 }
 
@@ -55,7 +55,7 @@ p,
 li,
 td,
 label {
-  @include font-size(body);
+  @include font-size(16);
 }
 
 strong,

@@ -1,0 +1,80 @@
+.story {
+  padding: 160px 0 140px;
+  background-color: color(secondary);
+  @include large {
+    padding: 80px 0  72px;
+  }
+  @include medium {
+    padding: 64px 0 32px;
+  }
+  @include small {
+    padding: 40px 0 24px;
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: right;
+    width: 60%;
+    position: relative;
+    cursor: pointer;
+    @include large {
+      width: 100%;
+      float: none;
+    }
+    &__el{
+      display: block;
+      border-radius: 10px;
+    }
+    &__icons {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 45%;
+      @include extra-small {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &__text {
+    float: left;
+    width: 40%;
+    padding-top: 72px;
+    @include large {
+      width: 100%;
+      float: none;
+      padding-top: 32px;
+    }
+  }
+  &__title {
+    @include font-size(48);
+    font-family: 'Georgia';
+    color: color(white);
+    font-weight: fw(bold);
+    margin-bottom: 32px;
+    @include large {
+      margin-bottom: 16px;
+    }
+    @include small {
+      @include font-size(32);
+    }
+    @include extra-small {
+      @include font-size(24);
+    }
+  }
+  &__desc {
+    @include font-size(24);
+    margin-bottom: 56px;
+    color: color(white);
+    @include large {
+      margin-bottom: 24px;
+    }
+    @include small {
+      @include font-size(20);
+    }
+    @include font-size(16);
+  }
+}

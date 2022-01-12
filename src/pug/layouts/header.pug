@@ -1,0 +1,73 @@
+-
+  dataHeader = {
+    logoSrc : 'logo.svg',
+    logoLink : '#',
+    logoAlt : 'Alivio',
+    menu : [
+        {
+          txt: 'Why Alivio',
+          link: '#WhyAlivio'
+        },
+        {
+          txt : 'Solutions',
+          link: '#solutions'
+        },
+        {
+          txt: 'Community',
+          link: '#community'
+        },
+        {
+          txt: 'Pricing',
+          link: '#pricing'
+        }
+      ]
+  };
+
+
+//header
+.header
+  .container
+    .header__wrapper
+      ='\n'
+      a.header__logo(herf= dataHeader.logoLink)
+        ='\n'
+        img.header__img(src= 'assets/img/logo/'+dataHeader.logoSrc, alt= dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      // burger-menu
+      ='\n'
+      button.burger-menu.js-burger-menu(type='button')
+        each val in [1,2,3]
+          ='\n'
+          span.burger-menu__bar
+      = '\n'
+      ///burger-menu
+      ='\n\n'
+      // header__nav
+      .header__nav-mobile
+        ul.header__nav
+          each val, index in dataHeader.menu
+            li.header__nav__item
+              ='\n'
+              a.header__nav__link(herf=val.link)
+                ='\n'
+                | !{val.txt}
+        ul.header__auth
+          li.header__nav__item
+            ='\n'
+            a.header__nav__link(herf='#')
+              ='\n'
+              | Sign in
+              ='\n'
+          li.header__nav__item
+            ='\n'
+            a.btn.btn--secondary(herf='#')
+              ='\n'
+              | Start Trial
+      ='\n'
+      ///header__nav
+      .header__bg
+
+
+='\n'
+///header

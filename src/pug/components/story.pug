@@ -1,0 +1,22 @@
+//story
+.story
+  .container
+    .story__wrapper
+      .story__img.js-play-video(data-target=dataStory.urlVideo)
+        img.story__img__el(src=dataStory.storyImg, alt=dataStory.title)/
+        img.story__img__icons(src=dataStory.storyIcon, alt=dataStory.title)/
+        ='\n'
+      .story__text
+        h2.story__title
+          ='\n'
+          | !{dataStory.title}
+        p.story__desc
+          ='\n'
+          | !{dataStory.desc}
+        .story__btn
+          ='\n'
+          a.btn(class= dataStory.btn.className, href=dataStory.btn.to)
+              ='\n'
+              | !{dataStory.btn.text}
+='\n'
+///story

@@ -1,0 +1,22 @@
+.alivio {
+  $t: &;
+  @include large {
+    padding-bottom: 80px;
+  }
+  @include medium {
+    padding-bottom: 40px;
+  }
+  padding: 24px 0 160px;
+  &__list {
+    font-size: 0;
+  }
+  #{$t}__item {
+    width: 33.3333333%;
+    padding: 16px;
+    @include small {
+      width: 100%;
+      display: block;
+      padding: 0;
+    }
+  }
+}

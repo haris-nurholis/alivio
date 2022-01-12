@@ -1,0 +1,38 @@
+-
+  dataFooter = {
+    footerImg : 'assets/img/logo/alivio.svg',
+    footerAlt: 'Alivio',
+    footerList: [
+                  {
+                    text: 'Why Alivio',
+                    link: '#whyAlivio',
+                  },
+                  {
+                    text: 'Solutions',
+                    link: '#Solutions',
+                  },
+                  {
+                    text: 'Community',
+                    link: '#Community',
+                  },
+                  {
+                    text: 'Pricing',
+                    link: '#Pricing'
+                  }
+                ]
+  };
+// footer
+.footer
+  .container
+    .footer__wrapper
+      a.footer__logo
+        img.footer__logo__el(src=dataFooter.footerImg, alt=dataFooter.footerAlt)/
+    .footer__menu
+      ul.footer__nav
+        each val, index in dataFooter.footerList
+          li.footer__nav__item
+            a.footer__nav__link(href=val.link)
+              | !{val.text}
+='\n'
+///footer
+

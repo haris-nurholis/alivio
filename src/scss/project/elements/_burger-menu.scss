@@ -1,0 +1,36 @@
+ /* ==========================================================================
+   Elements: Burger-menu
+   ========================================================================== */
+
+ .burger-menu {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 1;
+  padding: 0 8px;
+  text-align: right;
+  z-index: zi(header);
+  cursor: pointer;
+  &__bar {
+    display: inline-block;
+    height: 3px;
+    margin: 0 auto 4px;
+    background-color: #000;
+    transition: all .3s ease;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:nth-child(1) {
+      width: 22px;
+    }
+    &:nth-child(2) {
+      width: 18px;
+    }
+    &:nth-child(3) {
+      width: 24px;
+    }
+  }
+}

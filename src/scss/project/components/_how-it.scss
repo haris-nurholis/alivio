@@ -1,0 +1,54 @@
+.how-it {
+  padding: 72px 0 24px;
+  &__wrapper {
+    font-size: 0;
+  }
+  &__left {
+    width: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+    @include medium {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    @include retina {
+      margin-bottom: 8px;
+    }
+  }
+  &__head {
+    @include font-size(24);
+    color:color(grey, 2);
+    margin-bottom: 8px;
+    @include retina {
+      @include font-size(16);
+    }
+  }
+  &__title {
+    font-family: 'Georgia';
+    @include font-size(48);
+    color: color(primary);
+    margin: 0;
+    @include small {
+      @include font-size(32);
+    }
+    @include retina {
+      @include font-size(20);
+    }
+  }
+  &__right {
+    width: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+     @include medium {
+      width: 100%;
+    }
+  }
+  &__desc {
+    @include font-size(20);
+    color: color(grey, 2);
+    margin: 0;
+    @include extra-small {
+      @include font-size(16);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+//hero-banner__item
+.hero-banner__item
+  .hero-banner__img
+    .hero-banner__bg(style= "background-image: url('"+data.bannerImg+"');")
+  .container
+    .hero-banner__text
+      h2.hero-banner__title
+        ='\n'
+        | !{data.title}
+      p.hero-banner__desc
+        ='\n'
+        | !{data.text}
+      .hero-banner__btn
+        ='\n'
+        a.btn(class=data.btn.className href=data.btn.to)
+          ='\n'
+          | !{data.btn.text}
+
+='\n'
+///hero-banner__item

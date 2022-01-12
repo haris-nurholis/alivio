@@ -3,9 +3,23 @@ extends ../templates/default.pug
 //- Head
 block siteHeader
   -
-    siteTitle = 'Home';
+    siteTitle = 'Why Alivio';
 
 //- Body
 block siteContent
-  //- Example
-  include home/example.pug
+
+  //- hero-banner
+  include home/hero-banner.pug
+
+  //-how-it
+  include home/how-it.pug
+
+  //-alivio
+  include home/alivio.pug
+
+  //-story
+  include home/story.pug
+
+  //-our-product
+  include home/our-product.pug
+

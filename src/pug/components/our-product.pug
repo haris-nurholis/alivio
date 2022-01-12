@@ -1,0 +1,30 @@
+.our-product
+  .container
+    .our-product__wrapper
+      .our-product__img
+        .our-product__img__big
+          img.our-product__big-el(src=dataProduct.productImg, alt=dataProduct.productAlt)/
+        .our-product__small
+          p.our-product__small__title
+            | !{dataProduct.smallProduct.smallTitle}
+          img.our-product__small__img(src=dataProduct.smallProduct.smallImg, alt=dataProduct.smallProduct.smallName)/
+          p.our-product__small__name
+            | !{dataProduct.smallProduct.smallName}
+          h6.our-product__small__content
+            | !{dataProduct.smallProduct.smallContent}
+          ul.our-product__small__list
+            li.our-product__small__item
+              | !{dataProduct.smallProduct.smallItem}
+            li.our-product__small__item
+              | !{dataProduct.smallProduct.smallItem2}
+      .our-product__text
+        p.our-product__subtitle
+          | !{dataProduct.subtitle}
+        h2.our-product__title
+          | !{dataProduct.title}
+        p.our-product__desc
+          | !{dataProduct.desc}
+        .our-product__btn
+          ='\n'
+          a.btn(class=dataProduct.btn.className, herf=dataProduct.btn.to)
+            | !{dataProduct.btn.text}

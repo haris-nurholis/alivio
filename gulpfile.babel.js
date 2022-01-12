@@ -84,6 +84,7 @@ const DEV_PATH = {
       order: [
         `${SRC}/scripts/vendors/jquery-3.6.0.min.js`,
         `${SRC}/scripts/vendors/owl.carousel.min.js`,
+        `${SRC}/scripts/vendors/scrollreveal.min.js`,
         `${SRC}/scripts/vendors/*.js`
       ],
       concat: "vendor.js"
@@ -127,6 +128,7 @@ const BUILD_PATH = {
       `${BUILD}/assets/img`,
       `${BUILD}/assets/img/bg`,
       `${BUILD}/assets/img/dummy`,
+      `${BUILD}/assets/img/default`,
       `${BUILD}/assets/img/homescreen`,
       `${BUILD}/assets/img/icons`,
       `${BUILD}/assets/img/logo`,

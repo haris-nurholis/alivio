@@ -1,0 +1,43 @@
+.footer {
+  padding: 96px 0 144px;
+  background-color: color(secondary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include retina {
+    position: static;
+  }
+  &__logo {
+    color: color(white);
+    display: block;
+    padding-bottom: 60px;
+    &__el {
+      display: block;
+      width: 108px;
+    }
+  }
+  &__nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      @include font-size(24);
+      font-weight: fw(semi-bold);
+      padding-bottom: 56px;
+      @include small {
+        @include font-size(20);
+        padding-bottom: 48px;
+      }
+      @include extra-small {
+        padding-bottom: 32px;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: color(white);
+    }
+  }
+
+
+}

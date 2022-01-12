@@ -1,0 +1,52 @@
+.alivio {
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    counter-increment: number;
+  }
+  &__box {
+    border-radius: 8px;
+  }
+  &__title {
+    @include font-size(32);
+    margin-bottom: 8px;
+    font-weight: fw(bold);
+    font-family: 'Georgia';
+    position: relative;
+    &::before {
+      content: "0" counter(number);
+      color: rgba(1,153,109,.2);
+      font-size: 15rem;
+      line-height: 22.5rem;
+      font-weight: 400;
+      @include medium {
+        font-size: 11rem;
+        line-height: 10.5rem;
+      }
+    }
+  }
+  &__span {
+    position: absolute;
+    left: 40px;
+    bottom: 48px;
+    @include medium {
+      bottom: 8px;
+    }
+    @include extra-small {
+      @include font-size(24);
+    }
+  }
+  &__desc {
+    @include font-size(20);
+    font-weight: fw(medium);
+    margin-bottom: 48px;
+  }
+  &__img {
+    display: block;
+    border-radius: 8px;
+    @include small {
+      width: 100%;
+      display: block;
+    }
+  }
+}
