@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Components - Our product
+   ========================================================================== */
 .our-product {
   overflow: hidden;
   padding: 104px 0;
@@ -26,7 +29,7 @@
     background-color: color(white);
     max-width: 296px;
     max-height: 293px;
-    border-radius: 4px;
+    @include radius(0);
     box-shadow: 0px 4px 16px 0px rgba(165, 165, 165, 0.25);
     text-align: center;
     padding: 24px 56px 32px;

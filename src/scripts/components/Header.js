@@ -25,9 +25,10 @@ const Header = (() => {
       const _target = $(e.currentTarget).attr('href');
       const _active = $(e.currentTarget).parents('.header__nav__item');
       let _targetPosition = 0;
+      console.log(_target);
       $('.header__nav__item').removeClass('header__nav__item--active');
       _active.addClass('header__nav__item--active');
-      if(_target !== '#about') {
+      if(_target !== '#whyAlivio') {
         // mendapatkan posisi dari atas
         _targetPosition = $(_target).offset().top;
         if(!$('body').hasClass('scroll-down')){

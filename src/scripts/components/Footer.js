@@ -19,9 +19,9 @@ const Footer = (() => {
 
   - handleFooterMenu
   const handleFooterMenu = () => {
-    $('.js-footer-menu .footer__list__link').on('click', (e) => {
+    $('.js-footer-menu .footer__nav__link').on('click', (e) => {
       const _target = $(e.currentTarget).attr('href');
-      $('.js-header-menu .header__link[href="'+_target+'"]').trigger('click');
+      $('.js-header-menu .header__nav__link[href="'+_target+'"]').trigger('click');
       e.preventDefault();
     });
   }
@@ -30,7 +30,7 @@ const Footer = (() => {
   const handleClickLogoFooter = () => {
     $('.js-footer-logo').on('click', (e) => {
       // untuk mengklik (tigger)
-      $('.js-header-menu .header__link[href="#About"]').trigger('click');
+      $('.js-header-menu .header__nav__link[href="#whyAlivio"]').trigger('click');
       e.preventDefault();
     });
   }

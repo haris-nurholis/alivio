@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Components - Popup
+   ========================================================================== */
 .popup {
   position: fixed;
   top: 0;
@@ -31,6 +34,7 @@
     right: -10px;
     width: 20px;
     display: block;
+    background-color: color(white);
   }
   &__video-frame {
     width: 100%;

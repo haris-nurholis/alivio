@@ -1,9 +1,14 @@
+//-----------------------------------------------------------------------------
+  @name: Commponents- Story
+ -------------------------------------------------------------------------------//
 //story
-.story
+.story(id=dataStory.id)
   .container
     .story__wrapper
       .story__img.js-play-video(data-target=dataStory.urlVideo)
+        ='\n'
         img.story__img__el(src=dataStory.storyImg, alt=dataStory.title)/
+        ='\n'
         img.story__img__icons(src=dataStory.storyIcon, alt=dataStory.title)/
         ='\n'
       .story__text

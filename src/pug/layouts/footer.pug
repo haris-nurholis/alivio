@@ -1,23 +1,26 @@
+//-----------------------------------------------------------------------------
+  @name: Layouts - Footer
+ -------------------------------------------------------------------------------//
 -
   dataFooter = {
-    footerImg : 'assets/img/logo/alivio.svg',
+    footerImg: 'assets/img/logo/alivio.svg',
     footerAlt: 'Alivio',
     footerList: [
                   {
-                    text: 'Why Alivio',
-                    link: '#whyAlivio',
+                    txt: 'Why Alivio',
+                    link: '#whyAlivio'
                   },
                   {
-                    text: 'Solutions',
-                    link: '#Solutions',
+                    txt : 'Solutions',
+                    link: '#solutions'
                   },
                   {
-                    text: 'Community',
-                    link: '#Community',
+                    txt: 'Community',
+                    link: '#community'
                   },
                   {
-                    text: 'Pricing',
-                    link: '#Pricing'
+                    txt: 'Pricing',
+                    link: '#pricing'
                   }
                 ]
   };
@@ -25,14 +28,18 @@
 .footer
   .container
     .footer__wrapper
-      a.footer__logo
+      ='\n'
+      a.footer__logo.js-footer-logo(href='#whyAlivio')
+        ='\n'
         img.footer__logo__el(src=dataFooter.footerImg, alt=dataFooter.footerAlt)/
-    .footer__menu
+    .footer__menu.js-footer-menu
       ul.footer__nav
         each val, index in dataFooter.footerList
           li.footer__nav__item
+            ='\n'
             a.footer__nav__link(href=val.link)
-              | !{val.text}
+              ='\n'
+              | !{val.txt}
 ='\n'
 ///footer
 

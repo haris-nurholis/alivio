@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Layouts - Header
+   ========================================================================== */
 .header {
   position:fixed;
   top: 0;
@@ -10,6 +13,11 @@
   background-color: color(white);
   .on-scroll & {
     box-shadow: 0 5px 10px rgba(color(black), .1);
+  }
+  // header scroll down
+  .scroll-down & {
+    transform: translateY(-100%);
+    transition: transform .5s ease;
   }
   &__wrapper {
     @include clearfix;
@@ -98,6 +106,9 @@
           margin-right: 0;
         }
       }
+      &--active {
+        font-weight: 700;
+      }
       @include medium {
         display: block;
         margin-bottom: 16px;
@@ -129,7 +140,7 @@
       }
     }
     &__link {
-      text-decoration-style: none;
+      text-decoration: none;
       color: color(grey, 1);
       position: relative;
       padding-bottom: 32px;
@@ -151,7 +162,7 @@
       }
       &:hover {
         color: color(primary);
-        &:after {
+        &::after {
           transform: scaleX(1);
           transform-origin: center right;
           transition-delay: .2s;

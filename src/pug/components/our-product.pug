@@ -1,30 +1,46 @@
-.our-product
+//-----------------------------------------------------------------------------
+  @name: Commponents- Our-Product
+ -------------------------------------------------------------------------------//
+//our-product
+.our-product(id=dataProduct.id)
   .container
     .our-product__wrapper
       .our-product__img
         .our-product__img__big
+          ='\n'
           img.our-product__big-el(src=dataProduct.productImg, alt=dataProduct.productAlt)/
         .our-product__small
           p.our-product__small__title
+            ='\n'
             | !{dataProduct.smallProduct.smallTitle}
+          ='\n'
           img.our-product__small__img(src=dataProduct.smallProduct.smallImg, alt=dataProduct.smallProduct.smallName)/
           p.our-product__small__name
+            ='\n'
             | !{dataProduct.smallProduct.smallName}
           h6.our-product__small__content
+            ='\n'
             | !{dataProduct.smallProduct.smallContent}
           ul.our-product__small__list
             li.our-product__small__item
+              ='\n'
               | !{dataProduct.smallProduct.smallItem}
             li.our-product__small__item
+              ='\n'
               | !{dataProduct.smallProduct.smallItem2}
       .our-product__text
         p.our-product__subtitle
+          ='\n'
           | !{dataProduct.subtitle}
         h2.our-product__title
+          ='\n'
           | !{dataProduct.title}
         p.our-product__desc
+          ='\n'
           | !{dataProduct.desc}
         .our-product__btn
           ='\n'
           a.btn(class=dataProduct.btn.className, herf=dataProduct.btn.to)
+            ='\n'
             | !{dataProduct.btn.text}
+///our-product

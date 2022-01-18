@@ -5,10 +5,9 @@
 */
 
 import {
+  Header,
   Footer,
-  WindowScroll,
-  Article,
-  Header
+  WindowScroll
 }
 from 'components';
 

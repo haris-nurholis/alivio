@@ -1,12 +1,15 @@
+//-----------------------------------------------------------------------------
+  @name: Layouts - Header
+ -------------------------------------------------------------------------------//
 -
   dataHeader = {
-    logoSrc : 'logo.svg',
-    logoLink : '#',
-    logoAlt : 'Alivio',
-    menu : [
+    logoSrc: 'logo.svg',
+    logoLink: '#',
+    logoAlt: 'Alivio',
+    menu: [
         {
           txt: 'Why Alivio',
-          link: '#WhyAlivio'
+          link: '#whyAlivio'
         },
         {
           txt : 'Solutions',
@@ -29,7 +32,7 @@
   .container
     .header__wrapper
       ='\n'
-      a.header__logo(herf= dataHeader.logoLink)
+      a.header__logo(href= dataHeader.logoLink)
         ='\n'
         img.header__img(src= 'assets/img/logo/'+dataHeader.logoSrc, alt= dataHeader.logoAlt)/
         ='\n'
@@ -44,24 +47,24 @@
       ///burger-menu
       ='\n\n'
       // header__nav
-      .header__nav-mobile
+      .header__nav-mobile.js-header-menu
         ul.header__nav
           each val, index in dataHeader.menu
-            li.header__nav__item
+            li.header__nav__item(class=(index == 0 ? 'header__nav__item--active' : ''))
               ='\n'
-              a.header__nav__link(herf=val.link)
+              a.header__nav__link(href=val.link)
                 ='\n'
                 | !{val.txt}
         ul.header__auth
           li.header__nav__item
             ='\n'
-            a.header__nav__link(herf='#')
+            a.header__nav__link(href='#')
               ='\n'
               | Sign in
               ='\n'
           li.header__nav__item
             ='\n'
-            a.btn.btn--secondary(herf='#')
+            a.btn.btn--secondary(href='#')
               ='\n'
               | Start Trial
       ='\n'
