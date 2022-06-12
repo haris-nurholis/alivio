@@ -1,5 +1,5 @@
-@name : Components | Window Resize
 /*----------------------------------------
+@name : Components | Window Resize
 @description: set resize window
 ----------------------------------------
 */
